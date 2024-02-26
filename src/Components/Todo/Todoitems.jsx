@@ -7,7 +7,7 @@ function Todoitems() {
     <div className="w-full  ">
       <div>
         <ul>
-          <li>
+          <li className="">
             <Todoitem />
           </li>
         </ul>

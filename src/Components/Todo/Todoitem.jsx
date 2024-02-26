@@ -68,6 +68,14 @@ function Todoitem() {
               </button>
             ) : (
               <>
+                <button
+                  onClick={() => handleEditButton(item.id, item.inputValue)}
+                >
+                  <FaEdit />
+                </button>
+                <button onClick={() => handleDeleteButton(item.id)}>
+                  <MdDelete />
+                </button>
                 {item.isActive ? (
                   <button onClick={() => handleToggle(item.id)}>
                     <RxCross2 />
@@ -77,14 +85,6 @@ function Todoitem() {
                     <FaCheck />
                   </button>
                 )}
-                <button
-                  onClick={() => handleEditButton(item.id, item.inputValue)}
-                >
-                  <FaEdit />
-                </button>
-                <button onClick={() => handleDeleteButton(item.id)}>
-                  <MdDelete />
-                </button>
               </>
             )}
           </span>

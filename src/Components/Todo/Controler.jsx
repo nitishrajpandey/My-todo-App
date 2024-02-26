@@ -1,5 +1,3 @@
-// Controler.js
-
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setFilter, clearCompleted } from "../../Store/todoSlice";
@@ -34,9 +32,24 @@ function Controler() {
       <div className="flex justify-between items-baseline">
         <div>{getCount(filter)} item left</div>
         <div className="flex gap-3">
-          <button onClick={() => handleFilter("all")}>All</button>
-          <button onClick={() => handleFilter("active")}>Active</button>
-          <button onClick={() => handleFilter("complete")}>Complete</button>
+          <button
+            onClick={() => handleFilter("all")}
+            className={filter === "all" ? "bg-yellow-500" : ""}
+          >
+            All
+          </button>
+          <button
+            onClick={() => handleFilter("active")}
+            className={filter === "active" ? "bg-yellow-500" : ""}
+          >
+            Active
+          </button>
+          <button
+            onClick={() => handleFilter("complete")}
+            className={filter === "complete" ? "bg-yellow-500" : ""}
+          >
+            Complete
+          </button>
         </div>
         <div>
           <button onClick={handleClearCompleted}>Clear Completed</button>
