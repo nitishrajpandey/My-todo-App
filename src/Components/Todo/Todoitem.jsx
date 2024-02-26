@@ -62,7 +62,7 @@ function Todoitem() {
             />
           ) : (
             <p
-              className="font-medium overflow-hidden
+              className="font-medium overflow-hidden max-w-[60%] text-xl
             "
             >
               {item.inputValue}
