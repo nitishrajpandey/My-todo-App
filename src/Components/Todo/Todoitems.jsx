@@ -2,15 +2,15 @@ import React from "react";
 
 import Todoitem from "./Todoitem";
 import { useSelector } from "react-redux";
+import Empty from "./Empty";
 
 function Todoitems() {
   const todobox = useSelector((state) => state.todos.todos);
-  console.log(todobox.length);
-  console.log(typeof todobox);
+
   return (
     <div className="w-full  ">
       {todobox.length === 0 ? (
-        <h1>Empty</h1>
+        <Empty />
       ) : (
         <div>
           <ul>
