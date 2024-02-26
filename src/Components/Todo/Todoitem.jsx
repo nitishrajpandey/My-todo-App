@@ -47,7 +47,7 @@ function Todoitem() {
       {todoItems.map((item) => (
         <div
           key={item.id}
-          className={`flex justify-between py-1 bg-green-500 mb-3 ${
+          className={`flex  justify-between gap-2 py-2 px-3 border-b border-dotted border-b-black mb-3 ${
             item.isActive ? "line-through" : ""
           }`}
         >
@@ -57,13 +57,23 @@ function Todoitem() {
               value={editedText}
               onChange={handleChange}
               autoFocus
+              required
+              className="outline-none font-medium"
             />
           ) : (
-            <p>{item.inputValue}</p>
+            <p
+              className="font-medium overflow-hidden
+            "
+            >
+              {item.inputValue}
+            </p>
           )}
-          <span className="flex gap-2">
+          <span className="flex  gap-2">
             {editableItemId === item.id ? (
-              <button onClick={() => handleEditSave(item.id)}>
+              <button
+                onClick={() => handleEditSave(item.id)}
+                className="bg-green-600 p-1 text-white rounded-md"
+              >
                 <FaCheck />
               </button>
             ) : (
@@ -73,15 +83,24 @@ function Todoitem() {
                 >
                   <FaEdit />
                 </button>
-                <button onClick={() => handleDeleteButton(item.id)}>
+                <button
+                  onClick={() => handleDeleteButton(item.id)}
+                  className="p-1 bg-red-600 text-white rounded-md"
+                >
                   <MdDelete />
                 </button>
                 {item.isActive ? (
-                  <button onClick={() => handleToggle(item.id)}>
+                  <button
+                    onClick={() => handleToggle(item.id)}
+                    className="p-1 bg-black text-white rounded-md"
+                  >
                     <RxCross2 />
                   </button>
                 ) : (
-                  <button onClick={() => handleToggle(item.id)}>
+                  <button
+                    onClick={() => handleToggle(item.id)}
+                    className="bg-green-600 p-1 text-white rounded-md"
+                  >
                     <FaCheck />
                   </button>
                 )}

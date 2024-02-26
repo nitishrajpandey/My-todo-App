@@ -9,13 +9,13 @@ function Todo() {
     <div className="w-full">
       <div>
         <div className="mb-5">
-          <h1 className="font-bold text-5xl text-white">TODO</h1>
+          <h1 className="font-bold text-4xl xxs:text-5xl text-white">TODO</h1>
         </div>
         <div className="mb-14">
           <SearchBox />
         </div>
 
-        <div className="min-h-[50vh] flex flex-col justify-between p-5 bg-red-600">
+        <div className="h-[400px] flex flex-col justify-between p-5 bg-white shadow-lg shadow-gray-400 rounded-2xl overflow-y-scroll no-scrollbar">
           <div>
             <Todoitems />
           </div>

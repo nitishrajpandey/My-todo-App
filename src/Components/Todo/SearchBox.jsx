@@ -28,7 +28,7 @@ function SearchBox() {
   };
 
   return (
-    <div className="flex gap-10 bg-white py-2 px-5 rounded-xl">
+    <div className="flex flex-col xxs:flex-row gap-10 bg-white py-2 px-5 rounded-xl">
       <input
         type="text"
         placeholder="Add todo.."
@@ -37,7 +37,7 @@ function SearchBox() {
         onKeyDown={handelOnKeyDown}
       />
       <button
-        className="px-5 py-2 bg-green-700 text-white  text-xl rounded-xl"
+        className="px-5 py-2 bg-green-700 text-white  text-xl rounded-xl outline-none shadow-md shadow-gray-300 active:scale-95 duration-300 ease-in-out"
         onClick={handelOnClick}
       >
         Create
